@@ -36,19 +36,10 @@ A ideia é modelar um sistema de contas bancárias usando **herança, abstraçã
 
 ## 🗂️ Estrutura do repositório
 
-```
-sistema-de-conta-bancario/
-├── ContaBancaria.java              # Classe abstrata base
-├── ContaCorrente.java              # Conta corrente
-├── ContaPoupanca.java              # Conta poupança
-├── ContaSalario.java               # Conta salário
-├── Tributavel.java                 # Interface para contas tributáveis
-├── Bloqueavel.java                 # Interface para contas bloqueáveis
-├── SaldoInsuficienteException.java # Exceção: saldo insuficiente
-├── OperacaoInvalidaException.java  # Exceção: operação inválida
-├── Main.java                       # Classe principal (execução)
-├── diagrama_classes.drawio         # Diagrama de classes (draw.io)
-├── atividade_POO_conta_bancaria.pdf# Enunciado da atividade
+```text
+sistema-conta-bancaria/
+├── src/          Classes Java, interfaces, exceções e Main.java
+├── docs/         Enunciado e diagrama de classes
 └── README.md
 ```
 
@@ -56,7 +47,7 @@ sistema-de-conta-bancario/
 
 ## 🧩 Diagrama de classes
 
-O diagrama completo está no arquivo [`diagrama_classes.drawio`](./diagrama_classes.drawio) e pode ser aberto em [app.diagrams.net](https://app.diagrams.net).
+O diagrama completo está no arquivo [`diagrama_classes.drawio`](docs/diagrama_classes.drawio) e pode ser aberto em [app.diagrams.net](https://app.diagrams.net).
 
 ---
 
@@ -71,16 +62,16 @@ O diagrama completo está no arquivo [`diagrama_classes.drawio`](./diagrama_clas
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/guilhermeestrela10/sistema-de-conta-bancario.git
+git clone https://github.com/guilhermeestrela10/sistema-conta-bancaria.git
 
 # 2. Entre na pasta
-cd sistema-de-conta-bancario
+cd sistema-conta-bancaria
 
 # 3. Compile todos os arquivos
-javac *.java
+javac -encoding UTF-8 -d build src/*.java
 
 # 4. Execute o programa
-java Main
+java -cp build Main
 ```
 
 > 💡 Também funciona abrindo a pasta no **VS Code** ou **IntelliJ** e rodando a classe `Main`.
