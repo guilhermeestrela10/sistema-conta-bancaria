@@ -1,102 +1,50 @@
-<div align="center">
+# Sistema de contas bancárias
 
-# 🏦 Sistema de Conta Bancária
+Simulação de contas bancárias em Java para estudar orientação a objetos, regras por tipo de conta e tratamento de exceções.
 
-**Simulação de um sistema bancário em Java, aplicando os pilares da Programação Orientada a Objetos**
+[![Compilação](https://github.com/guilhermeestrela10/sistema-conta-bancaria/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/guilhermeestrela10/sistema-conta-bancaria/actions/workflows/ci.yml)
 
-![Java](https://img.shields.io/badge/Java-100%25-orange?logo=openjdk&logoColor=white)
-![POO](https://img.shields.io/badge/Paradigma-POO-blue)
-![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
-![UNIFSA](https://img.shields.io/badge/Projeto-Acadêmico-purple)
+[Execução](#executar-localmente) · [Modelagem](#modelagem) · [Verificações](#verificações) · [Enunciado](docs/atividade_POO_conta_bancaria.pdf)
 
-</div>
+## Escopo
 
----
+Projeto acadêmico da disciplina de Programação Orientada a Objetos, Engenharia de Software — UNIFSA. A demonstração cria contas em memória e apresenta depósitos, saques, rendimentos, tributação, bloqueio e falhas esperadas. Não há integração com instituições financeiras nem persistência.
 
-## 📖 Sobre o projeto
+## Modelagem
 
-Este projeto foi desenvolvido como atividade prática da disciplina de **Programação Orientada a Objetos** no curso de **Engenharia de Software** do **UNIFSA (Centro Universitário Santo Agostinho)**.
+| Responsabilidade | Implementação |
+| --- | --- |
+| Abstração e regras comuns | `ContaBancaria` |
+| Comportamento por tipo de conta | `ContaCorrente`, `ContaPoupanca`, `ContaSalario` |
+| Contratos | `Bloqueavel`, `Tributavel` |
+| Falhas de domínio | `SaldoInsuficienteException`, `OperacaoInvalidaException` |
+| Demonstração das operações | `Main` |
 
-A ideia é modelar um sistema de contas bancárias usando **herança, abstração, polimorfismo, encapsulamento, interfaces e tratamento de exceções personalizadas**.
+O [diagrama de classes](docs/diagrama_classes.drawio) pode ser aberto no diagrams.net.
 
----
+## Executar localmente
 
-## ✨ Conceitos aplicados
+Requisito: JDK 17 ou superior. Não há dependências externas.
 
-| Conceito | Onde aparece |
-|---|---|
-| **Abstração** | Classe abstrata `ContaBancaria` |
-| **Herança** | `ContaCorrente`, `ContaPoupanca` e `ContaSalario` herdam de `ContaBancaria` |
-| **Polimorfismo** | Cada tipo de conta se comporta de forma própria nas operações |
-| **Encapsulamento** | Atributos protegidos, acessados por métodos |
-| **Interfaces** | `Tributavel` e `Bloqueavel` |
-| **Exceções personalizadas** | `SaldoInsuficienteException` e `OperacaoInvalidaException` |
-
----
-
-## 🗂️ Estrutura do repositório
-
-```text
-sistema-conta-bancaria/
-├── src/          Classes Java, interfaces, exceções e Main.java
-├── docs/         Enunciado e diagrama de classes
-└── README.md
-```
-
----
-
-## 🧩 Diagrama de classes
-
-O diagrama completo está no arquivo [`diagrama_classes.drawio`](docs/diagrama_classes.drawio) e pode ser aberto em [app.diagrams.net](https://app.diagrams.net).
-
----
-
-## 🚀 Como executar
-
-### Pré-requisitos
-
-- [JDK 17+](https://adoptium.net/) instalado
-- Terminal (PowerShell, CMD, Bash...)
-
-### Passo a passo
-
-```bash
-# 1. Clone o repositório
+```shell
 git clone https://github.com/guilhermeestrela10/sistema-conta-bancaria.git
-
-# 2. Entre na pasta
 cd sistema-conta-bancaria
-
-# 3. Compile todos os arquivos
 javac -encoding UTF-8 -d build src/*.java
-
-# 4. Execute o programa
 java -cp build Main
 ```
 
-> 💡 Também funciona abrindo a pasta no **VS Code** ou **IntelliJ** e rodando a classe `Main`.
+## Estrutura
 
----
+```text
+src/       Classes, interfaces, exceções e ponto de entrada
+docs/      Enunciado e diagrama de classes
+build/     Compilação local, ignorada pelo Git
+```
 
-## 🛠️ Tecnologias
+## Verificações
 
-- ☕ **Java**
-- 🎨 **draw.io** (diagrama UML)
-- 🐙 **Git & GitHub**
+O GitHub Actions compila as classes e executa a demonstração com Java 17 e 21. A execução verifica que a demonstração termina sem erro inesperado; não substitui uma suíte de testes unitários das regras de negócio.
 
----
+## Autoria
 
-## 👨‍💻 Autor
-
-**Guilherme Henrique Macedo Estrela** (Gui)
-Estudante de Engenharia de Software — UNIFSA
-
-[![GitHub](https://img.shields.io/badge/GitHub-guilhermeestrela10-181717?logo=github)](https://github.com/guilhermeestrela10)
-
----
-
-<div align="center">
-
-Feito com ☕ e muito estudo de POO
-
-</div>
+Guilherme Henrique Macedo Estrela · Engenharia de Software — UNIFSA.
