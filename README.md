@@ -1,14 +1,14 @@
 # Sistema de contas bancárias
 
-Simulação de contas bancárias em Java para estudar orientação a objetos, regras por tipo de conta e tratamento de exceções.
+Simulação de contas bancárias em Java com orientação a objetos, regras por tipo de conta e tratamento de exceções.
 
 [![Compilação](https://github.com/guilhermeestrela10/sistema-conta-bancaria/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/guilhermeestrela10/sistema-conta-bancaria/actions/workflows/ci.yml)
 
-[Execução](#executar-localmente) · [Modelagem](#modelagem) · [Verificações](#verificações) · [Enunciado](docs/atividade_POO_conta_bancaria.pdf)
+[Execução](#executar-localmente) · [Modelagem](#modelagem) · [Verificações](#verificações)
 
 ## Escopo
 
-Projeto acadêmico da disciplina de Programação Orientada a Objetos, Engenharia de Software — UNIFSA. A demonstração cria contas em memória e apresenta depósitos, saques, rendimentos, tributação, bloqueio e falhas esperadas. Não há integração com instituições financeiras nem persistência.
+A demonstração cria contas em memória e apresenta depósitos, saques, rendimentos, tributação, bloqueio e falhas esperadas. Não há integração com instituições financeiras nem persistência.
 
 ## Modelagem
 
@@ -37,7 +37,7 @@ java -cp build Main
 
 ```text
 src/       Classes, interfaces, exceções e ponto de entrada
-docs/      Enunciado e diagrama de classes
+docs/      Diagrama de classes
 build/     Compilação local, ignorada pelo Git
 ```
 
@@ -47,4 +47,4 @@ O GitHub Actions compila as classes e executa a demonstração com Java 17 e 21.
 
 ## Autoria
 
-Guilherme Henrique Macedo Estrela · Engenharia de Software — UNIFSA.
+Guilherme Henrique Macedo Estrela.
